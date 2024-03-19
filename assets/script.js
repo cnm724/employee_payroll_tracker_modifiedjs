@@ -19,7 +19,7 @@ const collectEmployees = function () {
       salary: isNaN(salary) ? 0 : parseFloat(salary)
     };
 
-    // Adds the prompt obects into the Array
+    // Adds the prompt objects into the array
     people.push(employee);
 
     // Asks the user if they want to add an additional employee
@@ -30,22 +30,16 @@ const collectEmployees = function () {
 }
 
 // Display the average salary
- //TODO: Calculate and display the average salary
-  //define total running total variable
-  // add all salaries
-  // - for loop on employee array, add salary to running total
-  // divide by # of employees
-  // -employeesArray.length
-  //show the results in console
   function displayAverageSalary(employeesArray) {
+    //takes the sum of the running total
     let sum = 0;
     for (let i = 0; i < employeesArray.length; i++) {
       const element = employeesArray[i];
       sum += element.salary;
     }
+    //takes the average of the inputed salary and console logs the values
     const average = sum / employeesArray.length;
     console.log(`The average employee salery between our ${employeesArray.length} employee(s) is ${average}`);
-    return average;
   }
 
 
