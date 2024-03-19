@@ -52,8 +52,9 @@ const getRandomEmployee = function (employeesArray) {
   //-floor cuts off decimal, ceiling will cut off 
   //announce the winner
 
-  //const randomIndex = console.log(Math.floor(Math.random()*employeesArray.length))
-  // employeesArray[randomIndex].firstName
+  const randomIndex = Math.floor(Math.random()*employeesArray.length)
+  const randomElement = employeesArray[randomIndex];
+  console.log(`Congratulations to ${randomElement.firstName} ${randomElement.lastName}, our random drawing winner!`);
 }
 
 /*
