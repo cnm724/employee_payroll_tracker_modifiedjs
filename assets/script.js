@@ -6,6 +6,7 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function () {
   const people = [];
   let addEmployees = true;
+  //asks user for employee information
   while (addEmployees) {
     const firstName = prompt("Enter employee's first name");
     const lastName = prompt("Enter employee's last name");
@@ -30,30 +31,23 @@ const collectEmployees = function () {
 }
 
 // Display the average salary
-  function displayAverageSalary(employeesArray) {
-    //takes the sum of the running total
-    let sum = 0;
-    for (let i = 0; i < employeesArray.length; i++) {
-      const element = employeesArray[i];
-      sum += element.salary;
-    }
-    //takes the average of the inputed salary and console logs the values
-    const average = sum / employeesArray.length;
-    console.log(`The average employee salery between our ${employeesArray.length} employee(s) is ${average}`);
+function displayAverageSalary(employeesArray) {
+  //takes the sum of the running total
+  let sum = 0;
+  for (let i = 0; i < employeesArray.length; i++) {
+    const element = employeesArray[i];
+    sum += element.salary;
   }
+  //takes the average of the inputed salary and console logs the values
+  const average = sum / employeesArray.length;
+  console.log(`The average employee salery between our ${employeesArray.length} employee(s) is ${average}`);
+}
 
-
-// Select a random employee
 const getRandomEmployee = function (employeesArray) {
-  // TODO: Select and display a random employee
-  //put in a hat - employeesArray
-  //draw one at random
-  //-Math,floor(Math.random()*employeesArray
-  //-floor cuts off decimal, ceiling will cut off 
-  //announce the winner
-
-  const randomIndex = Math.floor(Math.random()*employeesArray.length)
+  //selects a random employee from the user inputed array
+  const randomIndex = Math.floor(Math.random() * employeesArray.length)
   const randomElement = employeesArray[randomIndex];
+  //prints first and last name of winner
   console.log(`Congratulations to ${randomElement.firstName} ${randomElement.lastName}, our random drawing winner!`);
 }
 
